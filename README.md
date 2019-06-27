@@ -13,3 +13,8 @@ TO HTA INTERFACE
 1. added an icon so its cuter (corporate logos can be cute to righhhht)
 2. Enabled scrollbar (HTA:application)
 3. Currently, the windows size adjusts to a static size, will change to a more dynamic window for 4k support - may need to take home to test on my monitor
+
+
+TO CHANGE
+1. Script legibility (split into multiple functions)
+2. html legibility (follow better practice in css customization)
