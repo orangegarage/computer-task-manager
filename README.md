@@ -18,3 +18,4 @@ TO HTA INTERFACE
 TO CHANGE
 1. Script legibility (split into multiple functions)
 2. html legibility (follow better practice in css customization)
+3. Script speed (each refresh takes too long. Understand that script may be faulty and look into a better algorithm
