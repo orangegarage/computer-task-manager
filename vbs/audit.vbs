@@ -4,7 +4,7 @@
 '#  AUTHOR.........:	McKenney's Inc
 '#  VERSION........:	2.01
 '#  CREATED........:	05/07/18
-'#  LICENSE........:	Freeware
+'#  LICENSE........:	GNU PLA 3.0
 '#  REQUIREMENTS...:  
 '#
 '#  DESCRIPTION....:	Retrieves a list of running processes on a remote
