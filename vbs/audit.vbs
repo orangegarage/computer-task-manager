@@ -10,7 +10,7 @@
 '#  DESCRIPTION....:	Retrieves a list of running processes on a remote
 '#						PC and allows the user to kill any as required.
 '#
-'#  NOTES..........:	Built on a script by spiceuser
+'#  NOTES..........:	Hi Shaheen I love you kthxbye
 '# 
 '#  CUSTOMIZE......:  
 '#============================================================================================
