@@ -10,7 +10,7 @@ Note that script is still long bc i haven't separated those into separate ones b
 Additional changes-
 
 TO HTA INTERFACE
-1. added an icon so its cuter (corporate logos can be cute to righhhht)
+1. added an icon so its cuter (corporate logos can be cute too righhhht)
 2. Enabled scrollbar (HTA:application)
 3. Currently, the windows size adjusts to a static size, will change to a more dynamic window for 4k support - may need to take home to test on my monitor
 
