@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta charset="utf-8">
+<meta name="description" content="Technology Services, McKenney's Inc">
+<meta name="description" content="Last Update: 06/20/19">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type ="text/vbscript" src="vbs/audit.vbs"></script> 
+
+<title>Process Audit</title>
+
+<HTA:APPLICATION
+	ID="objProcessAudit"
+	APPLICATIONNAME="ProcessAudit"
+	VERSION="2.01"
+	SCROLL="yes"
+	BORDER="dialog"
+	SINGLEINSTANCE="yes"
+	WINDOWSTATE="normal"
+	ICON="icon/mck_4c_logo_vert_lg_YOl_icon.ico"/>
+
+</head>
+
+<body>
+
+	<span style="float:left;">
+		Computer Name: <input type="text" class="text" tabindex="1" id="txtComputerName" title="Computer Name"><input class="button" type="button" tabindex="2" value="Show Items" name="btnShowProcess" onclick="ShowProcessItems()" onMouseOver="btnShowProcess.className='button btnhov'" onMouseOut="btnShowProcess.className='button'" title="Show process list">
+	</span>
+	<span style="float:right;font-size:0.9em;font-style:italic;color:#888888;font-weight:bold;">
+		Version <span id="VersionSpan">&nbsp;</span>&nbsp;&nbsp;&nbsp;Technology Services, McKenney's Inc
+	</span>
+	
+	<br /><br />
+	
+	<div id="DataArea"></div>
+	
+	<div id="NotFoundArea" class="hidden">
+		<span style="font-size:1.75em;font-weight:bold;color:red;">Access Error</span>
+		<p>
+			This PC cannot be reached or the Computer Name has been entered incorrectly.
+		</p>
+		<p>
+			Please make sure you have entered the Computer Name correctly and try again.
+		</p>
+	</div>
+
+	<div id="WMIError" class="hidden">
+		<span style="font-size:1.75em;font-weight:bold;color:red;">WMI Access Error</span>
+		<p>
+			Please make sure you have the required privileges to access the WMI repository on this PC.
+		</p>
+	</div>
+	
+	<div id="BottomBar" class="hidden" style="margin-top:10px">
+		<span style="float:left;">
+			<input class="button" type="button" style="width:130px;" value="Kill Processes" name="btnKill" onclick="KillProcess()" onMouseOver="btnKill.className='button btnkill'" onMouseOut="btnKill.className='button'" title="Kill selected processes">
+			&nbsp;&nbsp;
+			<input class="button" type="button" style="height:23px;width:70px;border-right:0px;" value="Refresh" name="btnRefresh" onclick="ShowProcessItems()" onMouseOver="btnRefresh.className='button btnhov'" onMouseOut="btnRefresh.className='button'" title="Refresh Process list"><input class="button" type="button" style="height:23px;width:70px;" value="Reset" name="btnReset" onclick="ResetForm()" onMouseOver="btnReset.className='button btnhov'" onMouseOut="btnReset.className='button'" title="Reset form">
+		</span>
+		
+		<span style="float:right;">
+			<span id="NumItemsSpan" style="font-size:0.9em;font-style:italic;">
+				&nbsp;
+			</span>
+			&nbsp;&nbsp;&nbsp;
+			<select name="ExportSelect" title="Export the Process list" onChange="ExportProcessDetails()" style="width:150;">
+				<option value="0">Export to:</option>
+				<option value="1" title="Export Process list to a Comma Seperated Values (csv) file">Export to csv</option>
+				<option value="2" title="Export Process list to an Excel (xls) file">Export to xls</option>
+				<option value="3" title="Export Process list to a Web page (html) file">Export to html</option>
+			</select>
+		</span>
+	</div>
+	
+</body>
+</html>
